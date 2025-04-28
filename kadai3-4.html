@@ -33,6 +33,14 @@
             function buyItem(no) {
 
                 console.log("商品番号: "+ no + " 商品名: "+items[no-1].name+"を購入します");
+
+                if　(items[no-1].stock == 0)
+                {
+                    console.log("在庫がありません");
+                }else
+                {
+                    items[no-1].stock-- ;
+                }
                 // ここにコードを書く
                 showItemList(); // 商品一覧の表示関数呼び出し
             }
